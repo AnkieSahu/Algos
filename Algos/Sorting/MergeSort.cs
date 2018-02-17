@@ -1,14 +1,18 @@
 ﻿using System;
-using static Algos.Helper; // For static class namespace
+using static Algos.Helper;
 
 namespace Algos.Sorting
 {
+    /// <summary>
+    /// Merge Sort is a Divide and Conquer algorithm. It divides input array in two halves recursively, 
+    /// and then merges the two sorted halves
+    /// </summary>
     public class MergeSort : SortingBase
     {
-        public void Sorting()
+        public void Sorting(bool printSortedData)
         {
             MergeSorting(0,len-1);
-            PrintArray();
+            PrintArray(printSortedData);
         }
         private void MergeSorting(int low, int high)
         {

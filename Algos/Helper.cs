@@ -13,18 +13,15 @@ namespace Algos
         }
 
         #region Sorting Helper
-        #region For Main
-        //len = 5;
-        //OriginalSourceData = GetData(len, ArrayData.Reversed);
-        //SortingCall(); //SortingMethods.MergeSort
-        #endregion
+      
         public enum SortingMethods
         {
             BubbleSort,
+            //BubbleSort_Modified,
             SelectionSort,
             InsertionSort,
             MergeSort,
-            QuickSort
+            //QuickSort
         };
         public enum ArrayData
         {
@@ -52,14 +49,14 @@ namespace Algos
             }
             return arr;
         }
-        public static void SortingCall(SortingMethods? srtMtd = null)
+        public static void SortingCall(bool printSortedData, SortingMethods? srtMtd = null)
         {
             Console.WriteLine("Given Data:  " + String.Join(", ", OriginalSourceData)+"\n");
             if (srtMtd != null)
             {               
                 Console.WriteLine("\n"+String.Join(" ", Regex.Matches(srtMtd.ToString(), @"([A-Z][a-z]+)").Cast<Match>())+"\n");               
                 dynamic runTimeObject = System.Reflection.Assembly.GetExecutingAssembly().CreateInstance("Algos.Sorting." + srtMtd.ToString());
-                runTimeObject.Sorting();
+                runTimeObject.Sorting(printSortedData);
             }
             else
             {
@@ -68,19 +65,22 @@ namespace Algos
                     Console.WriteLine(new string('=', OriginalSourceData.Length * 2 + 25));
                     Console.WriteLine(String.Join(" ", Regex.Matches(sortingType.ToString(), @"([A-Z][a-z]+)").Cast<Match>())+ "\n");
                     dynamic runTimeObject = System.Reflection.Assembly.GetExecutingAssembly().CreateInstance("Algos.Sorting." + sortingType.ToString());
-                    runTimeObject.Sorting();
+                    runTimeObject.Sorting(printSortedData);
                 }
-            }
-            Console.WriteLine();
-            Console.WriteLine(new string('=', OriginalSourceData.Length * 2 + 25));
-            Console.WriteLine("Sorted Data: " + String.Join(", ", SourceData));
+            }            
         }
-        public static void PrintArray()
+        public static void PrintArray(bool printSortedData)
         {
             sw.Stop();
-            TimeElapssed = sw.ElapsedTicks;            
+            TimeElapssed = sw.ElapsedTicks;
             Console.WriteLine($"Iteration is: {iterate} and Swap is: {swapCnt}");
             Console.WriteLine($"Your execution time is: {TimeElapssed}");
+            if (printSortedData)
+            {
+                Console.WriteLine();
+                Console.WriteLine("Sorted Data: " + String.Join(", ", SourceData));
+                Console.WriteLine(new string('=', OriginalSourceData.Length * 2 + 25));
+            }
         }
         public static void Swap(int s, int w)
         {

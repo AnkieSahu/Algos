@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Text.RegularExpressions;
 using static Algos.Helper;
 
 namespace Algos
@@ -8,14 +7,9 @@ namespace Algos
     {       
         static void Main(string[] args)
         {
-            len = 5;
-            OriginalSourceData = GetData(len,ArrayData.Reversed);
-            int[] arr = new int[5];
-            foreach (var item in arr)
-            {
-                Console.WriteLine(item);
-            }
-          //  SortingCall(SortingMethods.InsertionSort); //SortingMethods.MergeSort
+            len = 12;
+            OriginalSourceData = GetData(len,ArrayData.Random);           
+            SortingCall(true); //SortingMethods.MergeSort
             Console.Read();
         }       
     }

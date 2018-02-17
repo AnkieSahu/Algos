@@ -1,6 +1,5 @@
-﻿using System;
-using System.Diagnostics;
-using static Algos.Helper;
+﻿using static Algos.Helper;
+
 namespace Algos.Sorting
 {
     /// <summary>
@@ -9,7 +8,7 @@ namespace Algos.Sorting
     /// </summary>
     public class InsertionSort : SortingBase
     {
-        public void Sorting()
+        public void Sorting(bool printSortedData)
         {
             for (int i = 0; i < len - 1; i++)
             {
@@ -24,7 +23,7 @@ namespace Algos.Sorting
                     iterate += 1;
                 }                           
             }
-            PrintArray();
+            PrintArray(printSortedData);
         }
     }
 }

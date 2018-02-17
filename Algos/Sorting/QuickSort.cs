@@ -1,11 +1,10 @@
-﻿using System;
-using static Algos.Helper; // For static class namespace
+﻿using static Algos.Helper;
 
 namespace Algos.Sorting
 {
     public class QuickSort : SortingBase
     {
-        public void Sorting()
+        public void Sorting(bool printSortedData)
         {
             int[] arr = new int[len * 2 - 1];
             arr[len-1] = SourceData[0];
@@ -23,13 +22,9 @@ namespace Algos.Sorting
                         arr[len - 2 - j] = SourceData[i];
                         continue;
                     }
-                    
-
-
                 }
-
             }
-            PrintArray();
+            PrintArray(printSortedData);
         }
     }
 }
