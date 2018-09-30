@@ -8,11 +8,13 @@ namespace Algos.Sorting
         public SortingBase()
         {           
             SourceData = new int[OriginalSourceData.Length];
-            Array.Copy(OriginalSourceData, SourceData, OriginalSourceData.Length);
+            SourceData = (int[])OriginalSourceData.Clone();
+            //Array.Copy(OriginalSourceData, SourceData, OriginalSourceData.Length);
             swapCnt = 0;
             iterate = 0;
             TimeElapssed = 0;
             sw.Start();
         }
     }
+
 }

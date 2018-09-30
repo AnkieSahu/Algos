@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27130.2024
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algos", "Algos\Algos.csproj", "{BB614C4C-EA69-4BF4-8BAA-227F01CA0B8E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedList", "LinkedList\LinkedList.csproj", "{88CC6E1A-C26A-4732-A85E-040855861D26}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{BB614C4C-EA69-4BF4-8BAA-227F01CA0B8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB614C4C-EA69-4BF4-8BAA-227F01CA0B8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB614C4C-EA69-4BF4-8BAA-227F01CA0B8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88CC6E1A-C26A-4732-A85E-040855861D26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88CC6E1A-C26A-4732-A85E-040855861D26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88CC6E1A-C26A-4732-A85E-040855861D26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88CC6E1A-C26A-4732-A85E-040855861D26}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

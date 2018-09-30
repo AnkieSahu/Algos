@@ -9,6 +9,7 @@ namespace Algos.Sorting
             bool isSwapped = false;
             for (int i = 0; i < len - 1; i++)
             {
+                isSwapped = false;
                 for (int j = 0; (j < len - 1 - i); j++)
                 {
                     if (SourceData[j] > SourceData[j + 1])
