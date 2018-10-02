@@ -7,7 +7,6 @@ namespace Algos.Sorting
     {
         public SortingBase()
         {           
-            SourceData = new int[OriginalSourceData.Length];
             SourceData = (int[])OriginalSourceData.Clone();
             //Array.Copy(OriginalSourceData, SourceData, OriginalSourceData.Length);
             swapCnt = 0;

@@ -21,6 +21,7 @@ namespace Algos
             SelectionSort,
             InsertionSort,
             MergeSort,
+            MergeSort_ByList
             //QuickSort
         };
         public enum ArrayData
